@@ -69,6 +69,14 @@ TEMPLATES = [
     },
 ]
 
+LOGIN_URL = '/login/'  # or whatever your login view path is
+
+
+LOGIN_REDIRECT_URL = '/'  # where to go after successful login
+LOGOUT_REDIRECT_URL = '/login/'  # where to go after logout
+
+
+
 WSGI_APPLICATION = 'djangobase.wsgi.application'
 
 

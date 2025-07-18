@@ -7,8 +7,9 @@
 </head>
 <body class="p-4">
     <div class="container">
-        <h1 class="mb-4">📝 My TODO List</h1>
 
+        <h1 class="mb-4">📝 My TODO List</h1>
+        <a href="{% url 'logout' %}">Logout</a>
         <form action="{% url 'create_todo' %}" method="get" class="mb-3">
             <div class="input-group">
                 <input type="text" name="title" class="form-control" placeholder="Add a new task" required>
