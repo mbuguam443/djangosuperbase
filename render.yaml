@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: djangosuperbase
+    runtime: python
+    buildCommand: |
+      pip install -r requirements.txt
+    startCommand: gunicorn djangobase.wsgi:application
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11
+      - key: DJANGO_SETTINGS_MODULE
+        value: djangobase.settings
+      - key: SECRET_KEY
+        sync: false
+      - key: NEXT_PUBLIC_SUPABASE_URL
+        sync: false
+      - key: NEXT_PUBLIC_SUPABASE_ANON_KEY
+        sync: false
